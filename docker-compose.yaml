@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+
+  broker-api:
+    container_name: broker-api
+    image: broker-web-api
+    build:
+      context: .
+      dockerfile: BrokerApi/Dockerfile
+    ports:
+      - 8080:80
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+      - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: rabbitmq
+      RABBITMQ_DEFAULT_PASS: rabbitmq
