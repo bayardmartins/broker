@@ -4,7 +4,7 @@ namespace BrokerApi.Configuration
 {
     public static class RabbitConfiguration
     {
-        public static void Config(Rabbit rabbitConfig)
+        public static void Config(RabbitSettings rabbitConfig)
         {
             var model = CreateModel(rabbitConfig);
             model.ExchangeDeclare(rabbitConfig.Exchange, ExchangeType.Direct);
@@ -12,7 +12,7 @@ namespace BrokerApi.Configuration
             model.QueueBind(rabbitConfig.Queue, rabbitConfig.Exchange, rabbitConfig.QueueName());
         }
 
-        public static IModel CreateModel(Rabbit rabbitConfig)
+        public static IModel CreateModel(RabbitSettings rabbitConfig)
         {
             var connectionFactory = new ConnectionFactory()
             {
