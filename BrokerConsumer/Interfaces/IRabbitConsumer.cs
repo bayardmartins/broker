@@ -1,4 +1,4 @@
-﻿namespace BrokerConsumer.Interfaces;
+﻿namespace Broker.Consumer.Interfaces;
 
 public interface IRabbitConsumer
 {

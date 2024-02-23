@@ -1,6 +1,4 @@
-﻿using MongoDB.Driver;
-
-namespace BrokerApi.Configuration;
+﻿namespace Broker.Domain.Configuration;
 
 public class RabbitSettings
 {

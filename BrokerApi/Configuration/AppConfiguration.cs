@@ -1,7 +1,8 @@
-﻿using BrokerApi.Infra;
+﻿using Broker.Domain.Configuration;
+using Broker.Api.Infra;
 using MongoDB.Driver;
 
-namespace BrokerApi.Configuration;
+namespace Broker.Api.Configuration;
 
 public static class AppConfiguration
 {

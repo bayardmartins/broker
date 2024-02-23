@@ -1,6 +1,8 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
 
+namespace Broker.Domain.Models;
+
 public class MessageDb
 {
     [BsonId]
@@ -22,6 +24,16 @@ public static class MessageMapper
     {
         return new Message
         {
+            Title = message.Title,
+            Body = message.Body,
+        };
+    }
+
+    public static MessageDb Map(this Message message)
+    {
+        return new MessageDb
+        {
+            _id = new ObjectId().ToString(),
             Title = message.Title,
             Body = message.Body,
         };

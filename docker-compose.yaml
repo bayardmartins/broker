@@ -21,3 +21,7 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: rabbitmq
       RABBITMQ_DEFAULT_PASS: rabbitmq
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017

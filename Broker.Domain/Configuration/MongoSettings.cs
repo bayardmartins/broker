@@ -1,4 +1,4 @@
-﻿namespace BrokerApi.Configuration;
+﻿namespace Broker.Domain.Configuration;
 
 public class MongoSettings
 {

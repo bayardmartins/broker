@@ -1,11 +1,11 @@
-﻿using BrokerConsumer.Configuration;
-using BrokerConsumer.Infrastructure;
-using BrokerConsumer.Interfaces;
+﻿using Broker.Domain.Configuration;
+using Broker.Consumer.Infrastructure;
+using Broker.Consumer.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
 
-namespace BrokerConsumer;
+namespace Broker.Consumer;
 
 internal class Program
 {
@@ -25,7 +25,6 @@ internal class Program
         ConfigureDatabase(config, services);
 
         return services;
-        
     }
 
     private static void ConfigureDatabase(IConfigurationRoot config, ServiceCollection services)

@@ -1,9 +1,9 @@
-﻿using MongoDB.Bson;
+﻿using Broker.Domain.Models;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
-using SharpCompress.Readers;
 
-namespace BrokerApi.Infra;
+namespace Broker.Api.Infra;
 
 public class MongoRepository
 {
@@ -11,14 +11,6 @@ public class MongoRepository
     public MongoRepository(IMongoClient client)
     {
         _client = client;
-    }
-
-    public async Task Insert(string database, string collectionName, Message message)
-    {
-        IMongoCollection<BsonDocument> collection = _client.GetDatabase(database).GetCollection<BsonDocument>(collectionName);
-
-        await collection.InsertOneAsync(message.ToBsonDocument())
-        .ConfigureAwait(false);
     }
 
     public async Task<List<MessageDb>> FindMany(string database, string collectionName)
