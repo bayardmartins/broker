@@ -4,7 +4,7 @@ services:
 
   broker-api:
     container_name: broker-api
-    image: broker-web-api-3
+    image: broker-web-api
     build:
       context: .
       dockerfile: Broker.Api/Dockerfile
@@ -25,3 +25,9 @@ services:
     image: mongo
     ports:
       - 27017:27017
+  broker-consumer:
+    container_name: broker-app
+    image: broker-consumer-app
+    build:
+      context: .
+      dockerfile: Broker.Consumer/Dockerfile

@@ -25,7 +25,10 @@ public class RabbitConsumer : IRabbitConsumer
     public async Task StartConsumer()
     {
         await ConsumeAsync().ConfigureAwait(false);
-        Console.ReadLine();
+        while (true)
+        {
+            Thread.Sleep(5000);
+        }
     }
 
     private async Task ConsumeAsync()
