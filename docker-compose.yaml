@@ -7,7 +7,7 @@ services:
     image: broker-web-api
     build:
       context: .
-      dockerfile: BrokerApi/Dockerfile
+      dockerfile: Broker.Api/Dockerfile
     ports:
       - 8080:80
   rabbitmq:
@@ -21,3 +21,13 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: rabbitmq
       RABBITMQ_DEFAULT_PASS: rabbitmq
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+  broker-consumer:
+    container_name: broker-app
+    image: broker-consumer-app
+    build:
+      context: .
+      dockerfile: Broker.Consumer/Dockerfile

@@ -1,8 +1,6 @@
-﻿using MongoDB.Driver;
+﻿namespace Broker.Consumer.Configuration;
 
-namespace BrokerApi.Configuration;
-
-public class Rabbit
+public class RabbitSettings
 {
     public string? Url { get; set; }
     public string? UserName { get; set; }

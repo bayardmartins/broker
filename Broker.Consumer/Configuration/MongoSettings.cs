@@ -1,6 +1,6 @@
-﻿namespace BrokerApi.Configuration;
+﻿namespace Broker.Consumer.Configuration;
 
-public class Mongo
+public class MongoSettings
 {
     public string? Host { get; set; }
     public string? Database {  get; set; }
