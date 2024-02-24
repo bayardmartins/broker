@@ -1,4 +1,4 @@
-﻿using Broker.Domain.Configuration;
+﻿using Broker.Consumer.Configuration;
 using Broker.Consumer.Infrastructure;
 using Broker.Consumer.Interfaces;
 using Microsoft.Extensions.Configuration;

@@ -1,9 +1,9 @@
 ﻿using Broker.Consumer.Interfaces;
-using Broker.Domain.Configuration;
+using Broker.Consumer.Configuration;
 using RabbitMQ.Client.Events;
 using System.Text;
 using Newtonsoft.Json;
-using Broker.Domain.Models;
+using Broker.Consumer.Models;
 using Broker.Consumer.Infrastructure;
 using RabbitMQ.Client;
 

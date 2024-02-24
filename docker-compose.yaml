@@ -4,10 +4,10 @@ services:
 
   broker-api:
     container_name: broker-api
-    image: broker-web-api
+    image: broker-web-api-3
     build:
       context: .
-      dockerfile: BrokerApi/Dockerfile
+      dockerfile: Broker.Api/Dockerfile
     ports:
       - 8080:80
   rabbitmq:

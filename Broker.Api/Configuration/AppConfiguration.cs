@@ -1,5 +1,4 @@
-﻿using Broker.Domain.Configuration;
-using Broker.Api.Infra;
+﻿using Broker.Api.Infra;
 using MongoDB.Driver;
 
 namespace Broker.Api.Configuration;

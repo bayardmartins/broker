@@ -1,11 +1,10 @@
-using Broker.Domain.Configuration;
 using Broker.Api.Configuration;
 using Broker.Api.Infra;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using System.Text;
-using Broker.Domain.Models;
+using Broker.Api.Models;
 
 Console.WriteLine("Start");
 

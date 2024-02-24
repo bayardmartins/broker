@@ -1,4 +1,4 @@
-﻿using Broker.Domain.Models;
+﻿using Broker.Consumer.Models;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
